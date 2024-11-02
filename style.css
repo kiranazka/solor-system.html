@@ -1,0 +1,73 @@
+*
+{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+.sun
+{
+   height: 175px;
+   width: 175px;
+   border-radius: 50%;
+   background-color: rgb(247, 10, 10);
+   position:absolute ;
+   box-shadow: 0 0 75px rgb(255, 144, 8);
+
+
+   
+}
+.container
+{
+    width: 100vw;
+    height:100vh;
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    
+}
+body {
+    background-image: url("mountain.webp");
+    background-repeat:no-repeat ;
+    background-size:cover;
+    background-position:center;
+    
+  }
+  .earth
+  {
+    height: 75px;
+    width: 75px;
+    border-radius: 50%;
+    background:url("earth image.png") no-repeat center/cover;
+    position: relative;
+    animation: earth-orbit 3.5s linear infinite;
+  }
+  .earth:after
+  {
+    content:"" ;
+    width: 45px;
+    height:45px;
+    border-radius: 50%;
+    position: absolute;
+    background-image:url("moon.jpg") ;
+    border: none;
+    background-size: cover;
+    animation: earth-orbit 5s linear infinite;
+  }
+  @keyframes earth-orbit
+  {
+    from{
+         transform: rotate(0deg) translateX(220px) rotate(0deg);
+    }
+    to{
+        transform: rotate(360deg) translateX(220px) rotate(-360deg);
+    }
+  }
+  @keyframes moon-orbit
+  {
+    from{
+         transform: rotate(0deg) translateX(75px) rotate(0deg);
+    }
+    to{
+        transform: rotate(360deg) translateX(100px) rotate(-360deg);
+    }
+  }
